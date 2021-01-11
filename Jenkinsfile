@@ -19,9 +19,9 @@ pipeline {
         choice(name: 'FORCE_RUN', choices: 'no\nyes', description: 'Force build if the packer images already exist (yes/no)')
         booleanParam(name: 'ENABLE_WORKER_ROLE', defaultValue: true, description: 'Enable worker role or not against non production environments')
     }
-    triggers {
-         upstream(upstreamProjects: 'multibranch-pipeline-demo/develop', threshold: hudson.model.Result.SUCCESS)
-    }
+  //  triggers {
+  //       upstream(upstreamProjects: 'multibranch-pipeline-demo/develop', threshold: hudson.model.Result.SUCCESS)
+  //  }
 
     stages {
 
