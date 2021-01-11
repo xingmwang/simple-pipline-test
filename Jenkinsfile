@@ -44,7 +44,7 @@ pipeline {
             steps {
                 sh """
                 echo "Running Unit Tests"
-                sleep 5
+                sleep 3
                 """
             }
         }
