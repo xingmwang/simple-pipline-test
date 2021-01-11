@@ -30,6 +30,7 @@ pipeline {
                 cleanWs()
                 sh """
                 echo "Cleaned Up Workspace For Project"
+
                 """
                 print params.DEPLOY_ARTIFICATE_VERSION
                 print params.ENVIRONMENT_TAG
@@ -43,6 +44,7 @@ pipeline {
             steps {
                 sh """
                 echo "Running Unit Tests"
+                sleep 5
                 """
             }
         }
