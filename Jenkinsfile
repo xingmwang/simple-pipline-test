@@ -33,8 +33,8 @@ pipeline {
                 """
                 print params.DEPLOY_ARTIFICATE_VERSION
                 print params.ENVIRONMENT_TAG
-                print parmas.START_FROM_STAGE
-                print parmas.FORCE_RUN
+                print params.START_FROM_STAGE
+                print params.FORCE_RUN
                 print params.ENABLE_WORKER_ROLE
             }
         }
