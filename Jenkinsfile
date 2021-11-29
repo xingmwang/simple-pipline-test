@@ -47,7 +47,7 @@ pipeline {
         stage('Code Analysis') {
             steps {
                 sh """
-                echo "Running Code Analysis"
+                echo "Running Code Analysis" > testfile
                 """
             }
         }
