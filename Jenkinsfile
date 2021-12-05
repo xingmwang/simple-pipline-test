@@ -35,7 +35,7 @@ pipeline {
                 print params.ENABLE_WORKER_ROLE
             }
         }
-        stage('parallel test')
+        stage('parallel test') {
             parallel {
                 stage('Branch A') {
                     steps {
@@ -47,13 +47,14 @@ pipeline {
                         echo "On Branch B"
                         sleep 300
                     }
-                }
-	     }
-            stage(' Unit Testing') {
-                steps {
-                    sh """
-                    echo "Running Unit Tests"
-                    """
+	        }
+                stage(' Unit Testing') {
+                    steps {
+                        sh """
+                        echo "Running Unit Tests"
+                        """
+                        sleep 300
+                    }
                 }
             }
         }
