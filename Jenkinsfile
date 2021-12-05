@@ -52,18 +52,9 @@ pipeline {
             }
         }
 
-        stage('Build Deploy Code') {
-            when {
-                branch 'develop'
-            }
+        stage('Trigger') {
             steps {
-                sh """
-                echo "Building Artifact"
-                """
-
-                sh """
-                echo "Deploying Code"
-                """
+	        build job: "downstream/develop", wait: true
             }
         }
 
