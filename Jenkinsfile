@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Run Tests') {
             parallel {
-                stage('Test On Windows') {
+                stage('sleep20') {
                     steps {
-                        sleep 5
+                        sleep 20
                     }
                 }
-                stage('Test On Linux') {
+                stage('sleep10') {
                     steps {
                         sleep 10
                     }
