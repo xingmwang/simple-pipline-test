@@ -5,12 +5,12 @@ pipeline {
             parallel {
                 stage('Test On Windows') {
                     steps {
-                        sleep 120
+                        sleep 5
                     }
                 }
                 stage('Test On Linux') {
                     steps {
-                        sleep 180
+                        sleep 10
                     }
                 }
             }
