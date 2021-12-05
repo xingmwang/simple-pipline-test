@@ -36,6 +36,19 @@ pipeline {
             }
         }
 
+        parallel {
+            stage('Branch A') {
+                steps {
+                    sleep 300
+                }
+            }
+            stage('Branch B') {
+                steps {
+                    echo "On Branch B"
+                    sleep 300
+                }
+            }
+	 }
         stage(' Unit Testing') {
             steps {
                 sh """
