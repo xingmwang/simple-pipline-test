@@ -37,25 +37,15 @@ pipeline {
         }
         stage('parallel test') {
             parallel {
-                stage('Branch A') {
-                    steps {
-                        sleep 120
-                    }
-                }
-                stage('Branch B') {
-                    steps {
-                        echo "On Branch B"
-                        sleep 180
-                    }
-	        }
-                stage(' Unit Testing') {
-                    steps {
-                        sh """
-                        echo "Running Unit Tests"
-                        """
-                        sleep 300
-                    }
-                }
+	        'p001' {
+                    sleep 180
+		}
+	        'p002' {
+                    sleep 240
+		}
+	        'p003' {
+                    sleep 300
+		}
             }
         }
         stage('Code Analysis') {
